@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import logo from "./logo.png"
-import CartWidget from "../CartWidget/CartWidget.jsx"
+import CartWidget from "../CartWidget/CartWidget"
 import "./NavBar.css"
 
 const useStyles = makeStyles((theme) => ({

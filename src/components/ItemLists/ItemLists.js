@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Item from '../Item/Item'
+import './ItemLists.css'
 
 
 
@@ -15,23 +16,32 @@ function ItemLists() {
 
         console.log(productos)
 
+        let pruebas = productos.map(prueba => prueba.descripcion)
+        console.log(pruebas)
 
 
 return(
 
+    
+
+
+
     <div className="App" >
         <h1>MAPS + PROMISE</h1>
+        <div className="productos-container">
+      
        
        {productos.map((producto) => 
        <div key={producto.id}> 
              <Item
-             titulo={producto.title}
-             descripcion={producto.desc}
-             precio={producto.price}
+             img={producto.imagen}
+             name={producto.nombre}
+             desc={producto.descripcion}
+             price={producto.precio}
          ></Item>
          </div>
          )  } 
-        
+        </div>
 
     </div>
 

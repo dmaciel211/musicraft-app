@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 
 
 
-let stockCount = document.getElementById('stockCount')
 
  
 function ItemCount() {
