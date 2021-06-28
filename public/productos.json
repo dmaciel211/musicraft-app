@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "nombre": "CORT Action DLX",
+      "descripcion": "Activo - 2 mic. Soapbar. Colores Sunburst y Cherry",
+      "imagen": "http://habeshian.com/helpers/showImage.php?file=/archivos/productos/thumb/cort_action_dlx_1.jpg&w=119&h=119",
+      "cantidad": 1,
+      "stock": "5",
+      "precio": 20053
+    },
+    {
+      "id": 2,
+      "nombre": "Fender American Special con Funda",
+      "descripcion": "Negro con Pickguard Blanco",
+      "imagen": "http://habeshian.com/helpers/showImage.php?file=/archivos/productos/thumb/20190910142446_bajo-fender-american-special.jpg&w=119&h=119",
+      "cantidad": 1,
+      "stock": 1,
+      "precio": 227700
+    },
+    {
+      "id": 3,
+      "nombre": "Leonard LB429E- Eq 4 Vias",
+      "descripcion": "Activo - 2 mic. Soapbar. Colores Sunburst y Cherry",
+      "imagen": "http://habeshian.com/helpers/showImage.php?file=/archivos/productos/thumb/20190914162215_bajo-leonard-electroacustico-lb429e.jpg&w=119&h=119",
+      "cantidad": 1,
+      "stock": 5,
+      "precio": 20053
+    }
+  ]
