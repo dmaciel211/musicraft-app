@@ -5,7 +5,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import ItemCount from '../ItemCount/ItemCount';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles} from '@material-ui/core/styles';
 import "./Item.css"
@@ -24,10 +24,10 @@ const useStyles = makeStyles({
   
 function Item(props) {
     const classes = useStyles()
+   
     return (
 
-
-
+    
       
         <div className="card-container">
 
@@ -55,12 +55,7 @@ function Item(props) {
       </CardContent>
     </CardActionArea>
     <CardActions>
-      <Button size="small" color="primary">
-        Agregar producto
-      </Button>
-      <Button size="small" color="primary">
-        Eliminar producto
-      </Button>
+    <ItemCount number={props.number} stock={props.stock} />
     </CardActions>
   </Card>
 

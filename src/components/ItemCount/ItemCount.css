@@ -1,1 +1,23 @@
+.container-itemcount{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    align-content: center;
+}
 
+.boton-agregar {
+    height: 30px;
+    width: 10px
+}
+
+
+.boton-desagregar{
+    height: 30px;
+    width: 10px
+}
+
+.container-cantidades{
+    display: flex;
+    flex-direction: column;
+}
