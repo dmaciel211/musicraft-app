@@ -7,10 +7,8 @@ function ItemDetail(item) {
           <h1>{item.nombre}</h1>
           <h1>{item.descripcion}</h1>
           <h1> {item.detalles}</h1>
-          <img>{item.imagen}</img>
+          <img alt="imagen de producto">{item.imagen}</img>
           <h1>{item.precio}</h1>
-          
-         
        
         </div>
     )
