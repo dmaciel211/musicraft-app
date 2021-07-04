@@ -1,5 +1,7 @@
 
-
+.card-container{
+    padding:20px 10px;
+}
 .img-card-container{
     justify-content: center;
     display: flex;
@@ -9,4 +11,9 @@
 
 .card-body{
     max-height: 100px;
+}
+
+
+a{
+    text-decoration:none;
 }

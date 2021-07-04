@@ -1,29 +1,207 @@
 [
     {
       "id": 1,
+      "categoria":"bajos",
       "nombre": "CORT Action DLX",
       "descripcion": "Activo - 2 mic. Soapbar. Colores Sunburst y Cherry",
-      "imagen": "http://habeshian.com/helpers/showImage.php?file=/archivos/productos/thumb/cort_action_dlx_1.jpg&w=119&h=119",
+      "detalles":{
+        "marca":"Cort",
+        "modelo":"Action DLX",
+        "pais":"Indonesia",
+        "estado":"Nuevo",
+        "tipo":"Activo de 4 cuerdas"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/cort_action_dlx_2.jpg",
       "cantidad": 1,
       "stock": 5,
       "precio": 20053
     },
     {
       "id": 2,
+      "categoria":"bajos",
       "nombre": "Fender American Special con Funda",
       "descripcion": "Negro con Pickguard Blanco",
-      "imagen": "http://habeshian.com/helpers/showImage.php?file=/archivos/productos/thumb/20190910142446_bajo-fender-american-special.jpg&w=119&h=119",
+      "detalles":{
+        "marca":"Fender",
+        "modelo":"American Special",
+        "pais":"USA",
+        "estado":"Nuevo",
+        "tipo":"Eléctrico"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/20190914132448_3bajo-fender-jazz-bass-as.jpg",
       "cantidad": 1,
       "stock": 1,
       "precio": 227700
     },
     {
       "id": 3,
+      "categoria":"bajos",
       "nombre": "Leonard LB429E- Eq 4 Vias",
       "descripcion": "Activo - 2 mic. Soapbar. Colores Sunburst y Cherry",
-      "imagen": "http://habeshian.com/helpers/showImage.php?file=/archivos/productos/thumb/20190914162215_bajo-leonard-electroacustico-lb429e.jpg&w=119&h=119",
+      "detalles":{
+        "marca":"Leonard",
+        "modelo":"LB429E",
+        "pais":"China",
+        "estado":"Nuevo",
+        "tipo":"Acústico"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/20190914162215_bajo-leonard-electroacustico-lb429e.jpg",
       "cantidad": 1,
       "stock": 5,
       "precio": 20053
+    },
+    {
+      "id": 4,
+      "categoria":"guitarras",
+      "nombre": "Squier Classic Vibe - Telecaster Thinline 69",
+      "descripcion": "Mahogany",
+      "detalles":{
+        "marca":"Squire",
+        "modelo":"Telecaster",
+        "pais":"Indonesia",
+        "estado":"Nuevo",
+        "tipo":"Eléctrica"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/squire_thinline_69.jpg",
+      "cantidad": 1,
+      "stock": 3,
+      "precio": 58802
+    },
+    {
+      "id": 5,
+      "categoria":"guitarras",
+      "nombre": "Epiphone Emperor II Joe Pass",
+      "descripcion": "Natural - Sunburst",
+      "detalles":{
+        "marca":"Epiphone",
+        "modelo":"Emperor II Joe Pass",
+        "pais":"Korea",
+        "estado":"Usado",
+        "tipo":"ES - 175"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/epiphone_emperor_ii.jpg",
+      "cantidad": 1,
+      "stock": 1,
+      "precio": 250000
+    },
+    {
+      "id": 6,
+      "categoria":"guitarras",
+      "nombre": "Yamaha RGX121Z",
+      "descripcion": "Natural - Sunburst",
+      "detalles":{
+        "marca":"Yamaha",
+        "modelo":"RGX121Z",
+        "pais":"Taiwan",
+        "estado":"Nuevo",
+        "tipo":"Stratocaster"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/yamaha_rgx121z.jpg",
+      "cantidad": 1,
+      "stock": 4,
+      "precio": 47000
+    },
+    {
+      "id": 7,
+      "categoria":"pianos",
+      "nombre": "Korg LP180",
+      "descripcion": "Con Mueble y unidad de 3 pedales",
+      "detalles":{
+        "marca":"Korg",
+        "modelo":"LP180",
+        "pais":"China",
+        "estado":"Nuevo",
+        "tipo":"Piano Digital"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/lp180_1.jpg",
+      "cantidad": 1,
+      "stock": 3,
+      "precio": 98603
+    },
+    {
+      "id": 8,
+      "categoria":"pianos",
+      "nombre": "Yamaha P125",
+      "descripcion": "Negro/plateado",
+      "detalles":{
+        "marca":"Yamaha",
+        "modelo":"P125",
+        "pais":"China",
+        "estado":"Nuevo",
+        "tipo":"Piano Digital"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/20190819132414_yamaha-p125.jpg",
+      "cantidad": 1,
+      "stock": 2,
+      "precio": 116481
+    },
+    {
+      "id": 9,
+      "categoria":"pianos",
+      "nombre": "Yamaha P45",
+      "descripcion": "¡¡¡¡ Nuevo modelo !!!!",
+      "detalles":{
+        "marca":"Yamaha",
+        "modelo":"P125",
+        "pais":"China",
+        "estado":"Nuevo",
+        "tipo":"Piano Digital"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/yamaha_p45_1.jpg",
+      "cantidad": 1,
+      "stock": 2,
+      "precio": 79185
+    },
+    {
+      "id": 10,
+      "categoria":"amps",
+      "nombre": "Stagg 20 AA R EU",
+      "descripcion": "Beige",
+      "detalles":{
+        "marca":"Stagg",
+        "modelo":"20",
+        "pais":"China",
+        "estado":"Nuevo",
+        "tipo":"Combo"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/amp-stagg-acustica-20.jpg",
+      "cantidad": 1,
+      "stock": 10,
+      "precio": 11959
+    },
+    {
+      "id": 11,
+      "categoria":"amps",
+      "nombre": "Marshall AS50D Soloist",
+      "descripcion": "Acustica y Voces",
+      "detalles":{
+        "marca":"Marshall",
+        "modelo":"AS50D",
+        "pais":"India",
+        "estado":"Nuevo",
+        "tipo":"Combo"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/marshall_as50d_cover.jpg",
+      "cantidad": 1,
+      "stock": 7,
+      "precio": 64432
+    },
+    {
+      "id": 12,
+      "categoria":"amps",
+      "nombre": "Laney LA65C",
+      "descripcion": "Beige",
+      "detalles":{
+        "marca":"Laney",
+        "modelo":"LA65C",
+        "pais":"China",
+        "estado":"Nuevo",
+        "tipo":"Combo"
+      },
+      "imagen": "http://habeshian.com/archivos/productos/laneyla65c.jpg",
+      "cantidad": 1,
+      "stock": 2,
+      "precio": 43065
     }
+   
   ]

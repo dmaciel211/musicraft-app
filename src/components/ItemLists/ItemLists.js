@@ -13,8 +13,7 @@ function ItemLists({productos}) {
 return(
 
     <div className="App" >
-        <h1>MAPS + PROMISE</h1>
-        <div className="productos-container">
+            <div className="productos-container">
       
        {productos.map((producto) => 
        
@@ -26,6 +25,7 @@ return(
              price={producto.precio}
              number={producto.cantidad}
              stock={producto.stock}
+             id={producto.id}
          />
          </div>
          )  } 

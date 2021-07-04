@@ -14,7 +14,7 @@ import "./CartWidget.css"
    
 
         
-        <i class="fas fa-shopping-cart"></i> <p>0</p>
+        <i className="fas fa-shopping-cart"></i> <p>0</p>
         
       </>
     );
