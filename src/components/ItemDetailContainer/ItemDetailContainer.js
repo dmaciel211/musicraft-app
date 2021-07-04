@@ -30,8 +30,7 @@ const ItemDetailContainer = () => {
       );
   }, [id]);
 
-  console.log(loading);
-
+ 
   if (!item){    return (
       <div className={classes.root}>
         <CircularProgress />

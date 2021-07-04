@@ -62,18 +62,18 @@ export default function ButtonAppBar() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>
-                <Link to="/category/guitarras">Guitarras </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/category/bajos">Bajos </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/category/pianos">Pianos </Link>
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                <Link to="/category/amps">Amplificadores </Link>
-              </MenuItem>
+              <Link to="/category/guitarras">
+                <MenuItem onClick={handleClose}>Guitarras</MenuItem>
+              </Link>
+              <Link to="/category/bajos">
+                <MenuItem onClick={handleClose}>Bajos</MenuItem>
+              </Link>
+              <Link to="/category/pianos">
+                <MenuItem onClick={handleClose}>Pianos</MenuItem>
+              </Link>
+              <Link to="/category/amps">
+                <MenuItem onClick={handleClose}>Amplificadores</MenuItem>
+              </Link>
             </Menu>
           </div>
         </Toolbar>
