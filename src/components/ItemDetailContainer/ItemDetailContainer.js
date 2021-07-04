@@ -23,19 +23,19 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     fetch("https://mocki.io/v1/8c647439-27cc-4c34-a0b2-60f6e41ef1a5")
       .then((response) => response.json())
-      .then((data) =>
-        setItem(
-          data.find((item) => item.id === +id)
-                 ), setLoading(false)
+      .then(
+        (data) => setItem(data.find((item) => item.id === +id)),
+        setLoading(false)
       );
   }, [id]);
 
- 
-  if (!item){    return (
+  if (!item) {
+    return (
       <div className={classes.root}>
         <CircularProgress />
-      </div>)} 
-  
+      </div>
+    );
+  }
 
   return (
     <ItemDetail
