@@ -35,6 +35,7 @@ function Item(props) {
 
 <Link to={`/item/${props.id}`}>   </Link>   
  <Card className={classes.root}>
+ <Link to={`/item/${props.id}`}>
     <CardActionArea>
       <div className="img-card-container">
       <CardMedia
@@ -46,11 +47,11 @@ function Item(props) {
       </div>
 
             <CardContent className="card-body">
-            <Link to={`/item/${props.id}`}>
+           
         <Typography gutterBottom variant="h5" component="h2">
           {props.name}
         </Typography>
-           </Link>
+         
         <Typography variant="body2" color="textSecondary" component="p">
           {props.desc}
         </Typography>
@@ -59,6 +60,7 @@ function Item(props) {
       </CardContent>
       
     </CardActionArea>
+    </Link>
     <CardActions>
     <ItemCount number={props.number} stock={props.stock} />
     </CardActions>
