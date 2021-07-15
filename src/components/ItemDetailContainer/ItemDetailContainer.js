@@ -39,16 +39,7 @@ const ItemDetailContainer = () => {
 
   return (
     <ItemDetail
-      item={item}
-      nombre={item.nombre}
-      imagen={item.imagen}
-      descripcion={item.descripcion}
-      precio={item.precio}
-      marca={item.detalles.marca}
-      modelo={item.detalles.modelo}
-      pais={item.detalles.pais}
-      estado={item.detalles.estado}
-      tipo={item.detalles.tipo}
+    item={item}
     />
   );
 };

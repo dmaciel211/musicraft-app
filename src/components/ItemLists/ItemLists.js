@@ -19,11 +19,11 @@ return(
        
        <div key={producto.id}> 
              <Item
+             item={producto}
              img={producto.imagen}
              name={producto.nombre}
              desc={producto.descripcion}
              price={producto.precio}
-             number={producto.cantidad}
              stock={producto.stock}
              id={producto.id}
          />

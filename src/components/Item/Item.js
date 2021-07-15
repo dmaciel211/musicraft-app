@@ -9,6 +9,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles} from '@material-ui/core/styles';
 import {Link} from 'react-router-dom'
+import {useCartContext} from '../../context/CartContext.js' 
 
 import "./Item.css"
 
@@ -27,6 +28,9 @@ const useStyles = makeStyles({
 function Item(props) {
     const classes = useStyles()
    
+  const {addToCart, cart} = useCartContext();
+    const onAdd = qty => {if(qty>0){addToCart(props, qty); alert(`Añadiste ${qty} ${props.name} al carrito` )}else {alert('No hay elementos para añadir al carrito')}};
+
     return (
 
     
@@ -62,7 +66,7 @@ function Item(props) {
     </CardActionArea>
     </Link>
     <CardActions>
-    <ItemCount number={props.number} stock={props.stock} />
+ <ItemCount onAdd ={onAdd} item={props}></ItemCount>
     </CardActions>
   </Card>
 
