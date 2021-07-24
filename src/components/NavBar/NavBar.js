@@ -8,6 +8,7 @@ import CartWidget from "../CartWidget/CartWidget";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../context/CartContext.js";
 import "./NavBar.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,13 +23,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ButtonAppBar() {
+export default function NavBar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  
+  const { cart } = useCartContext();
+  console.log(cart)
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -41,7 +47,7 @@ export default function ButtonAppBar() {
           <Link to="/">
             <img src={logo} width="100px" alt="logo de la empresa" />
           </Link>
-          <CartWidget position="right "></CartWidget>
+          {(cart.length > 0) && <CartWidget position="right"/>}
         </div>
         <Toolbar>
           <div className="menu-boton-container">

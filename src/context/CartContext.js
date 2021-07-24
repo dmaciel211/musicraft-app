@@ -1,40 +1,67 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext
+} from "react";
 
-//Crear contexto
 export const CartContext = createContext({});
-
-//Exportar directamente el contexto
 export const useCartContext = () => useContext(CartContext);
 
-//Crear Provider
-export const CartProvider = ({ children }) => {
+export const CartProvider = ({
+  children
+}) => {
   const [cart, setCart] = useState([]);
-  const [db, setDb] = useState([])
-
-
 
   const clearCart = () => setCart([]);
 
+
+
+  const removeItem = (id) => setCart(cart.filter(item => item.id !== id))
+
+
+
+
   const isInCart = (id) => cart.some((item) => item.id === id);
+
+  const realStock = item =>{
+    const foundItem = cart.find(e=> e.id === item.id);
+    return foundItem ? item.stock - foundItem.quantity : item.stock
+  
+  }
+
 
   const addToCart = (item, quantity) => {
     if (isInCart(item.id)) {
-        const newCart = cart.map(el => {if(el.id === item.id){return {...el, quantity: el.quantity + quantity}}else return el})
-        setCart([newCart]);
- }else{ 
-      setCart((prev) => [...prev, { ...item, quantity }]);
+      const newCart = cart.map((cartElement) => {
+        if (cartElement.id === item.id) {
+          return {
+            ...cartElement,
+            quantity: cartElement.quantity + quantity
+          };
+        } else return cartElement;
+      });
+      setCart(newCart);
+    } else {
+      setCart((prev) => [...prev, {
+        ...item,
+        quantity
+      }]);
     }
   };
 
-  useEffect(() => {
-    fetch("https://mocki.io/v1/8c647439-27cc-4c34-a0b2-60f6e41ef1a5")
-    .then((response) => response.json())
-    .then((data) => setDb(data))
-      } )
-
-  return (
-    <CartContext.Provider value={{ cart, setCart, addToCart, db }}>
-      {children}
-    </CartContext.Provider>
+  return ( <
+    CartContext.Provider value = {
+      {
+        cart,
+        setCart,
+        addToCart,
+        clearCart,
+        removeItem,
+        realStock
+      }
+    } > {
+      children
+    } </CartContext.Provider>
   );
 };

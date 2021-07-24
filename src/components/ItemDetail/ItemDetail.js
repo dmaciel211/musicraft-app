@@ -3,13 +3,16 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import {useCartContext} from '../../context/CartContext.js' 
 
+
 function ItemDetail({item}) {
 
-const {addToCart, cart} = useCartContext();
+const {addToCart, realStock} = useCartContext();
 
+let stock = realStock(item)
 
-
-const onAdd = qty => {if(qty>0){addToCart(item, qty); alert(`Añadiste ${qty} ${item.nombre} al carrito` )}else {alert('No hay elementos para añadir al carrito')}};
+const onAdd = qty => {if(qty>0){addToCart(item, qty); 
+  alert(`Añadiste ${qty} ${item.nombre} al carrito` )}else 
+  {alert('No hay elementos para añadir al carrito')}};
 
 
 
@@ -35,7 +38,8 @@ const onAdd = qty => {if(qty>0){addToCart(item, qty); alert(`Añadiste ${qty} ${
           <h3>Tipo: {item?.detalles.tipo}</h3>
           
           </div>
-          {item.stock > 0 && <ItemCount  item={item} onAdd={onAdd} />}
+          {stock > 0 && <ItemCount  item={item} onAdd={onAdd} />}
+          {stock <= 0 && <p>No hay stock disponible</p>}
         </div>
     )
 }

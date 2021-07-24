@@ -28,8 +28,8 @@ const useStyles = makeStyles({
 function Item(props) {
     const classes = useStyles()
    
-  const {addToCart, cart} = useCartContext();
-    const onAdd = qty => {if(qty>0){addToCart(props, qty); alert(`Añadiste ${qty} ${props.name} al carrito` )}else {alert('No hay elementos para añadir al carrito')}};
+  const {addToCart} = useCartContext();
+    const onAdd = qty => {if(qty>0){addToCart(props, qty); alert(`Añadiste ${qty} ${props.name} al carrito` )}};
 
     return (
 
@@ -66,7 +66,10 @@ function Item(props) {
     </CardActionArea>
     </Link>
     <CardActions>
- <ItemCount onAdd ={onAdd} item={props}></ItemCount>
+      
+ {(props.stock > 0) && <ItemCount onAdd ={onAdd} item={props}></ItemCount>}
+ {(props.stock <= 0) && <p>No hay stock disponible</p>}
+
     </CardActions>
   </Card>
 
@@ -79,11 +82,6 @@ function Item(props) {
 }
 
 
-Item.defaultProps = {
-  img:"https://img2.freepng.es/20190701/eir/kisspng-bass-guitar-acoustic-guitar-music-double-bass-acoustic-transparent-amp-png-clipart-free-downlo-5d1ab141b61083.7993505215620304017457.jpg",
-  title:'Título',
-  desc:'Descripción',
-  price:'$'
-};
+
 
 export default Item

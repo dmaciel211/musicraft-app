@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import "./ItemCount.css";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { useCartContext } from "../../context/CartContext.js";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -20,9 +18,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ItemCount({ item, onAdd }) {
-  let [number, setNumber] = useState(0);
+ const [number, setNumber] = useState(0);
 
-  let [stock, setStock] = useState(item.stock);
+  const [stock, setStock] = useState(item.stock);
 
   const handleIncrement = () => {
     if (stock > 0 && number < item.stock) {
@@ -48,11 +46,11 @@ function ItemCount({ item, onAdd }) {
       <div className={classes.root}>
         {stock > 0 && (
           <Button
-          className="boton-itemcount"
+            className="boton-itemcount"
             onClick={handleIncrement}
             variant="contained"
             color="secondary"
-            href="#contained-buttons"
+          
           >
             +
           </Button>
@@ -70,38 +68,39 @@ function ItemCount({ item, onAdd }) {
           />
         </form>
         <Button
-        className="boton-itemcount"
+          className="boton-itemcount"
           onClick={handleDecrement}
           variant="contained"
           color="secondary"
-          href="#contained-buttons"
+         
         >
           -
         </Button>
       </div>
-          <div className="botones-compra">
-      <Button
-        onClick={() => onAdd(number)}
-        className="boton-itemcount"
-        color="secondary"
-        variant="contained"
-        href="#contained-buttons"
-      >
-        Agregar al Carrito
-      </Button>
-
-      {number > 0 && (
-        <Link to="/cart">
+      <div className="botones-compra">
+        {number > 0 && (
           <Button
+            onClick={() => onAdd(number)}
             className="boton-itemcount"
             color="secondary"
             variant="contained"
-            href="#contained-buttons"
+         
           >
-            Terminar compra{" "}
+            Agregar al Carrito
           </Button>
-        </Link>
-      )}
+        )}
+
+        {number > 0 && (
+          <Link to="/cart">
+            <Button
+              className="boton-itemcount"
+              color="secondary"
+              variant="contained"
+            >
+              Terminar compra{" "}
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );

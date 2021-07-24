@@ -1,4 +1,4 @@
-[
+{ "productos":[
     {
       "id": 1,
       "categoria":"bajos",
@@ -203,5 +203,5 @@
       "stock": 2,
       "precio": 43065
     }
-   
   ]
+}
