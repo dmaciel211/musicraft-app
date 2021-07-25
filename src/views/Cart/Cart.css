@@ -1,0 +1,23 @@
+.button-hide{
+    display: none; 
+}
+
+.form-hide{
+    display:none;
+}
+
+.form-show{
+    display:initial;
+}
+
+.product-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cart-botonera{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

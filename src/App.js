@@ -1,10 +1,11 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar.js";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
+import ItemListContainer from "./views/ItemListContainer/ItemListContainer.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import ItemDetailContainer from "./views/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
-import Cart from "./components/Cart/Cart.js";
+import Cart from "./views/Cart/Cart.js";
+import Orders from "./views/Orders/Orders";
 
 
 function App() {
@@ -23,9 +24,13 @@ function App() {
             <Route path="/category/:categoryName">
               <ItemListContainer />
             </Route>
+            <Route path="/order">
+              <Orders/>
+            </Route>
             <Route path="/item/:id">
               <ItemDetailContainer />
             </Route>
+          
             <Route path="*">
               <h1>No se ha encontrado la página</h1>
             </Route>

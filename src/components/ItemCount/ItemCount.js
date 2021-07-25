@@ -4,6 +4,7 @@ import "./ItemCount.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import {useCartContext} from '../../context/CartContext.js' 
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ItemCount({ item, onAdd }) {
+const {cart} = useCartContext();
  const [number, setNumber] = useState(0);
 
   const [stock, setStock] = useState(item.stock);
@@ -90,7 +92,7 @@ function ItemCount({ item, onAdd }) {
           </Button>
         )}
 
-        {number > 0 && (
+        {cart.lenght > 0 && (
           <Link to="/cart">
             <Button
               className="boton-itemcount"

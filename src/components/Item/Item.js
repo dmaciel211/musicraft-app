@@ -65,6 +65,7 @@ function Item(props) {
       
     </CardActionArea>
     </Link>
+    
     <CardActions>
       
  {(props.stock > 0) && <ItemCount onAdd ={onAdd} item={props}></ItemCount>}

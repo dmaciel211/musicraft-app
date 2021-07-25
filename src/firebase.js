@@ -15,3 +15,6 @@ var firebaseConfig = {
 const app = !firebase.apps.lenght ? firebase.initializeApp(firebaseConfig) : firebase.app();
 
 export const itemsCollection = firebase.firestore(app).collection("productos")
+
+export const db = app.firestore();
+

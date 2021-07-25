@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "../ItemLists/ItemLists";
+import ItemList from "../../components/ItemLists/ItemLists";
 import { useParams } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext";
+
 import { itemsCollection } from "../../firebase";
 
 
